@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChuteSort — Support</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f9f9f9;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 720px; margin: 0 auto; background: #fff; padding: 2.5rem 2rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 2rem 0 0.5rem; color: #111; }
+    p { margin-bottom: 1rem; }
+    ul { margin: 0.5rem 0 1rem 1.5rem; }
+    ul li { margin-bottom: 0.4rem; }
+    details { margin-bottom: 0.75rem; border: 1px solid #e5e5e5; border-radius: 6px; padding: 0.75rem 1rem; }
+    summary { font-weight: 600; cursor: pointer; list-style: none; }
+    summary::before { content: "▸  "; color: #0a84ff; }
+    details[open] summary::before { content: "▾  "; }
+    details p { margin-top: 0.75rem; margin-bottom: 0; }
+    .contact-box { background: #f0f7ff; border: 1px solid #b3d5ff; border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 1rem; }
+    .contact-box a { color: #0a84ff; font-weight: 600; }
+    a { color: #0a84ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge { display: inline-block; background: #e8f5e9; color: #2e7d32; font-size: 0.8rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; vertical-align: middle; }
+    .hw-box { background: #fffbf0; border: 1px solid #f5a623; border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0 1.5rem; }
+    .hw-box strong { color: #b37400; }
+    .disclaimer { background: #f8f8f8; border: 1px solid #ddd; border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 1rem; font-size: 0.9rem; color: #444; }
+    .disclaimer p { margin-bottom: 0.6rem; }
+    .disclaimer p:last-child { margin-bottom: 0; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e5e5e5; font-size: 0.85rem; color: #888; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Support</h1>
+    <p class="meta">App: <strong>ChuteSort</strong> &nbsp;|&nbsp; Developer: <strong>Micah Wiebe</strong></p>
+
+    <p>
+      Need help with ChuteSort? Start with the FAQ below — most common questions are answered there.
+      If you still need assistance, reach out directly and we'll get back to you as soon as possible.
+    </p>
+
+    <h2>Compatible Hardware</h2>
+    <div class="hw-box">
+      <p><strong>ChuteSort is designed to work exclusively with the Scale-Tec POINT Scale.</strong></p>
+      <p>
+        The app reads weight data over Bluetooth Low Energy from the Scale-Tec POINT Scale's BLE interface.
+        Compatibility with other scales or devices is not guaranteed and is not officially supported.
+        If you are using a different scale, the app may not connect or may display incorrect values.
+      </p>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>The app won't connect to my Bluetooth scale</summary>
+      <p>
+        Make sure Bluetooth is enabled on your iPad (<strong>Settings → Bluetooth</strong>) and that
+        the scale is powered on and in pairing/broadcast mode. Open the ChuteSort Bluetooth Setup screen,
+        tap <em>Scan for Devices</em>, and select your scale from the list. If it doesn't appear, try
+        cycling the scale off and on and scanning again. Note: ChuteSort requires a real device — it
+        cannot connect to a scale through a simulator.
+      </p>
+    </details>
+
+    <details>
+      <summary>I granted Bluetooth permission but the app still can't scan</summary>
+      <p>
+        Go to <strong>Settings → Privacy &amp; Security → Bluetooth</strong> on your iPad and confirm
+        that ChuteSort is listed and toggled on. If you previously denied the permission you will need
+        to enable it manually here; the app cannot prompt you a second time.
+      </p>
+    </details>
+
+    <details>
+      <summary>Weight readings look wrong or erratic</summary>
+      <p>
+        This is usually a scale calibration or Bluetooth characteristic issue. Confirm the scale is on a
+        stable, level surface and is properly zeroed before connecting. If readings are consistently
+        off, check whether the scale's BLE notification characteristic UUID matches what is configured
+        in the app — refer to the README for how to inspect your scale with LightBlue.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I export my session data?</summary>
+      <p>
+        Open the session from the Session Management screen, then tap the export button in the top bar.
+        This opens the iOS share sheet, where you can save the file to Files, email it, or share it
+        to any compatible app. Exported data is a CSV file containing all weighing records for that session.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I delete a session or reset the app data?</summary>
+      <p>
+        Individual sessions can be deleted from the Session Management screen by swiping left on a
+        session row and tapping <em>Delete</em>. To clear all data, go to <strong>Settings → Reset App Data</strong>.
+        This action is permanent and cannot be undone.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does ChuteSort require an internet connection?</summary>
+      <p>
+        No. ChuteSort works entirely offline. All data is stored locally on your iPad and no internet
+        connection is needed for any feature.
+      </p>
+    </details>
+
+    <details>
+      <summary>Which iPads and iOS versions are supported?</summary>
+      <p>
+        ChuteSort supports any iPad capable of running iOS 16 or later. The app is designed for
+        landscape orientation and works on all current iPad models. iPhone is not supported.
+      </p>
+    </details>
+
+    <h2>Contact Support</h2>
+    <p>
+      If the FAQ didn't resolve your issue, please email us with as much detail as possible —
+      including your iPad model, iOS version, scale model, and a description of what happened.
+      Screenshots are always helpful.
+    </p>
+    <div class="contact-box">
+      <strong>Email:</strong> <a href="mailto:mwiebecoding@outlook.com">mwiebecoding@outlook.com</a><br />
+      <br />
+      We aim to respond within <strong>2 business days</strong>.
+    </div>
+
+    <h2>Reporting Bugs</h2>
+    <p>
+      Found a bug? Please include the following in your report:
+    </p>
+    <ul>
+      <li>App version (visible in <strong>Settings</strong>)</li>
+      <li>iPad model and iOS version</li>
+      <li>Scale make and model</li>
+      <li>Steps to reproduce the issue</li>
+      <li>What you expected vs. what actually happened</li>
+    </ul>
+    <p>Send bug reports to <a href="mailto:mwiebecoding@outlook.com">mwiebecoding@outlook.com</a> with the subject line <em>ChuteSort Bug Report</em>.</p>
+
+    <h2>Disclaimer</h2>
+    <div class="disclaimer">
+      <p>
+        <strong>Accuracy of Weight Readings:</strong> ChuteSort reads and displays weight values exactly as
+        transmitted by the Scale-Tec POINT Scale over Bluetooth. Micah Wiebe is not responsible for
+        inaccurate, incomplete, or unexpected weight values that may result from firmware or software
+        updates made by Scale-Tec to the POINT Scale, changes to its Bluetooth communication protocol,
+        scale calibration issues, or any other hardware or software changes outside of this app.
+        Always verify critical weight data independently before making decisions based on it.
+      </p>
+      <p>
+        <strong>No Affiliation with Scale-Tec:</strong> ChuteSort is an independent application developed
+        by Micah Wiebe. It is not affiliated with, endorsed by, sponsored by, or in any way officially
+        connected to Scale-Tec or its parent companies. "Scale-Tec" and "POINT Scale" are trademarks
+        or trade names of their respective owners. Their mention here is solely to identify the
+        compatible hardware.
+      </p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Micah Wiebe. All rights reserved. &nbsp;|&nbsp;
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</body>
+</html>
